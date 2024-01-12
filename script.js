@@ -18,12 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Selecting DOM elements: the button, the season dropdown, and the cocktail container
   const generateButton = document.querySelector('.button');
-  const seasonDropdown = document.querySelector('.season__list');
-  const cocktailContainer = document.querySelector('.cocktail__container');
+  const seasonDropdown = document.querySelector('.form__season-list');
+  const cocktailContainer = document.querySelector('.form__cocktail-container');
 
   // Initially disabling the generate button and clearing the cocktail container
   generateButton.disabled = true;
   cocktailContainer.innerText = "";
+  cocktailContainer.innerHTML = `
+  <img class="cocktail__image" src="./assets/img/igor-stepanov-rNKKUsIJNd4-unsplash.jpg" alt="image" style="width: 20rem; padding:0 0 0 2.25rem; margin:0" />
+`;
 
   // Event listener for handling changes in the season dropdown
   seasonDropdown.addEventListener('change', function() {
@@ -61,7 +64,7 @@ const fetchCocktailData = async () => {
 
 // Function to display the cocktail data in the DOM
 const displayCocktail = (cocktail) => {
-  const container = document.querySelector('.cocktail__container');
+  const container = document.querySelector('.form__cocktail-container');
   let ingredients = '';
   // Looping through ingredients and measurements to create a formatted list
   for (let i = 1; i <= 20; i++) {
@@ -71,10 +74,10 @@ const displayCocktail = (cocktail) => {
   }
   // Updating the inner HTML of the container with cocktail details
   container.innerHTML = `
-    <h3>${cocktail.strDrink}</h3>
-    <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}" style="max-width: 15rem; height: auto;" />
-    <p><strong>Instructions:</strong> ${cocktail.strInstructions}</p>
-    <p><strong>Ingredients:</strong><br>${ingredients}</p>
+    <h3 class="cocktail__title">${cocktail.strDrink}</h3>
+    <img class="cocktail__image" src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}" style="width: 20rem; " />
+    <p class="cocktail__instructions"><strong>Instructions:</strong><br> ${cocktail.strInstructions}</p>
+    <p class="cocktail__ingredients"><strong>Ingredients:</strong><br>${ingredients}</p>
   `;
 
 };

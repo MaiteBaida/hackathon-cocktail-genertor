@@ -6,7 +6,7 @@ const Main = () => {
             <form class="form">
                 <div class='form__container'>
                     <label for="form__season"></label>
-                    <select name="form__season" class="season__list">
+                    <select name="form__season" class="form__season-list">
                         <option value="" disabled selected>Select a season</option>
                         <option value="Winter">Winter</option>
                         <option value="Spring">Spring</option>
@@ -15,10 +15,11 @@ const Main = () => {
                     </select>
                 <div>
                     ${Button('Generate your cocktail')}
-                    </div>
-                    <div class="cocktail__container"></div>
                 </div>
                 </div>
+                    <div class="form__cocktail-container"></div>
+                </div>
+                
             </form>
         </main>
     `;
