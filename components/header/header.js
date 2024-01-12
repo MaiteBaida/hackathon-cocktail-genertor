@@ -1,7 +1,7 @@
 const Header = () => {
     return`
-    <header>
-          <img src="" alt="logo-image" />
+    <header class='header'>
+          <img src="./assets/svg/cocktail2-svgrepo-com.svg" alt="logo-image" class="header__logo" />
     </header>`
 }
 
