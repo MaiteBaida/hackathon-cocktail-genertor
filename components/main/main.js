@@ -1,4 +1,3 @@
-//Gala
 import Button from '../button/button.js';
 
 const Main = () => {

@@ -13,9 +13,9 @@ const html = `
   const root = document.getElementById('App');
   root.innerHTML = html;
 
-  //Gala
-  // Event listener for DOMContentLoaded to initialize functionality after the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', function() {
+// Event listener for DOMContentLoaded to initialize functionality after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+
   // Selecting DOM elements: the button, the season dropdown, and the cocktail container
   const generateButton = document.querySelector('.button');
   const seasonDropdown = document.querySelector('.season__list');
@@ -76,4 +76,7 @@ const displayCocktail = (cocktail) => {
     <p><strong>Instructions:</strong> ${cocktail.strInstructions}</p>
     <p><strong>Ingredients:</strong><br>${ingredients}</p>
   `;
+
 };
+
+
