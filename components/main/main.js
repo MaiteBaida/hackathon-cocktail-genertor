@@ -5,13 +5,18 @@ const Main = () => {
         <main>
             <form class="form">
                 <div class='form__container'>
-                    <label for="form__season"></label>
-                    <select name="form__season" class="form__season-list">
-                        <option value="" disabled selected>Select a season</option>
-                        <option value="Winter">Winter</option>
-                        <option value="Spring">Spring</option>
-                        <option value="Summer">Summer</option>
-                        <option value="Fall">Fall</option>
+                    <label for="form__mood"></label>
+                    <select name="form__mood" class="form__mood-list">
+                        <option value="" disabled selected>How are you feeling today?</option>
+                        <option value="Anxious">Anxious 😰</option>
+                        <option value="Hopeful">Hopeful 🥺</option>
+                        <option value="Romantic">Romantic 🥰</option>
+                        <option value="Humorous">Humorous 🥸</option>
+                        <option value="Angry">Angry 😡</option>
+                        <option value="Stressed">Stressed 😩</option>
+                        <option value="Happy">Happy 😊</option>
+                        <option value="Gloomy">Gloomy 😔</option>
+                        <option value="Chill">Chill 😎</option>
                     </select>
                 <div>
                     ${Button('Generate your cocktail')}

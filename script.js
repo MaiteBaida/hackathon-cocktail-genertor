@@ -16,9 +16,9 @@ const html = `
 // Event listener for DOMContentLoaded to initialize functionality after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Selecting DOM elements: the button, the season dropdown, and the cocktail container
+  // Selecting DOM elements: the button, the mood dropdown, and the cocktail container
   const generateButton = document.querySelector('.button');
-  const seasonDropdown = document.querySelector('.form__season-list');
+  const moodDropdown = document.querySelector('.form__mood-list');
   const cocktailContainer = document.querySelector('.form__cocktail-container');
 
   // Initially disabling the generate button and clearing the cocktail container
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
   <img class="cocktail__image" src="./assets/img/igor-stepanov-rNKKUsIJNd4-unsplash.jpg" alt="image" style="width: 20rem; padding:0 0 0 2.25rem; margin:0" />
 `;
 
-  // Event listener for handling changes in the season dropdown
-  seasonDropdown.addEventListener('change', function() {
+  // Event listener for handling changes in the mood dropdown
+  moodDropdown.addEventListener('change', function() {
     // Enabling or disabling the generate button based on the dropdown selection
     generateButton.disabled = this.value === "";
   });
